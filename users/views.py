@@ -20,13 +20,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 User = get_user_model()
 
 
-# class RegisterView(APIView):
-#     def post(self, request):
-#         serializer = RegisterSerializer(data=request.data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return Response({"message": "User created!"}, status=201)
-#         return Response(serializer.errors, status=400)
+
     
 class RegisterView(GenericAPIView):
     serializer_class = RegisterSerializer
